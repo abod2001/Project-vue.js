@@ -1,0 +1,41 @@
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline-start: clamp(2rem, 7.5vw, 8rem);
+    margin-top: 4rem;
+}
+
+.imgs {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+}
+
+.imgs>div {
+    display: flex;
+    width: 700px;
+    justify-content: space-between;
+    margin-inline-end: 1rem;
+}
+
+.imgs>div>div {
+    width: 340px;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.imgs>div>div span {
+    flex: 1;
+}
+
+.imgs>div>div input {
+    width: 220px;
+}
+
+#image-border-color {
+    height: 21px;
+    padding: 0.2rem;
+    border: 1px solid #c2c2c2;
+}

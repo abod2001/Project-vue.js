@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>مشروع 3</title>
+</head>
+<body>
+
+  <main id="abood">
+    <div class="images">
+      <div class="imgs">
+        <div>
+          <label for="image-width">image width (100 - 450)</label>
+          <div>
+            <input v-model="width" min="100" max="450" type="range" name="image-width" id="image-width">
+            <span>({{ width }}px)</span>
+          </div>
+        </div>
+        <div>
+          <label for="image-blur">image blur (0 - 12)</label>
+          <div>
+            <input v-model="imageBlur" min="0" max="12" type="range" name="image-blur" id="image-blur">
+            <span>({{ imageBlur }}px)</span>
+          </div>
+        </div>
+        <div>
+          <label for="image-opacity">image opacity (0 - 100)</label>
+          <div>
+            <input v-model="imageOpacity" min="0" max="100" type="range" name="image-opacity" id="image-opacity">
+            <span>({{ imageOpacity }}%)</span>
+          </div>
+        </div>
+        <div>
+          <label for="image-border-width">image border width (0 - 10)</label>
+          <div>
+            <input v-model="imageBorderWidth" min="0" max="10" type="range" name="image-border-width"
+              id="image-border-width">
+            <span>({{ imageBorderWidth }}px)</span>
+          </div>
+        </div>
+        <div>
+          <label for="image-border-radius">image border radius (0 - 20)</label>
+          <div>
+            <input v-model="imageBorderRadius" min="0" max="20" type="range" name="image-border-radius"
+              id="image-border-radius">
+            <span>({{ imageBorderRadius }}px)</span>
+          </div>
+        </div>
+        <div>
+          <label for="image-border-color">image border color (0 - 20)</label>
+          <div>
+            <input v-model="imageBorderColor" type="color" name="image-border-color"
+              id="image-border-color">
+            <span>({{ imageBorderColor }})</span>
+          </div>
+        </div>
+
+      </div>
+
+      <img :style="{
+        height: `100%`,
+        width: `${width}px`,
+        filter: `blur(${imageBlur}px)`,
+        opacity: `${imageOpacity}%`,
+        borderRadius: `${imageBorderRadius}px`,
+        outlineStyle: `solid`,
+        outlineWidth: `${imageBorderWidth}px`,
+        outlineColor: `${imageBorderColor}`,
+      }" src="avatar.png" alt="avatar-image">
+    </div>
+  </main>
+
+  <script src="vue.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
